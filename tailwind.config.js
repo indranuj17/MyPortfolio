@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      perspective: {
+    1000: '1000px',
+  },
       colors: {
         primary: {
           50: '#eff6ff',
@@ -93,6 +96,10 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+         float: {
+      '0%, 100%': { transform: 'translateY(0)' },
+      '50%': { transform: 'translateY(-10px)' },
+    },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
@@ -144,6 +151,12 @@ export default {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'dark-mesh': 'radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)',
       },
+      animation: {
+    'spin-slow': 'spin 10s linear infinite',
+    'float': 'float 3s ease-in-out infinite',
+    'float-fast': 'float 2s ease-in-out infinite',
+    'float-delay': 'float 3s ease-in-out infinite 1s',
+  },
     },
   },
   plugins: [],

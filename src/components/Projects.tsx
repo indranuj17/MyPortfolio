@@ -106,8 +106,10 @@ const Projects: React.FC = () => {
             
             className="text-4xl md:text-5xl font-bold mb-6 text-primary-600 dark:text-primary-400"
             whileHover={{ scale: 1.05 }}
-          ><span className='text-4xl md:text-5xl font-bold mb-6 text-primary-100 dark:text-primary-400'> My </span>
-             Projects
+          > <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            My <span className="text-primary-600 dark:text-primary-400">Projects</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto mb-8"></div>
           </motion.h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto ">
             A collection of projects that showcase my skills and passion for creating 
