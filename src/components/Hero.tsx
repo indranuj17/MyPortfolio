@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
-import Photo from "/public/myPhoto.jpg"
+
 
 const Hero: React.FC = () => {
   const scrollToNext = () => {
@@ -32,15 +32,18 @@ const Hero: React.FC = () => {
           className="w-full lg:w-2/3 text-left"
         >
           <motion.p
-            className="text-lg md:text-xl text-primary-600 dark:text-primary-300 font-medium mb-4 relative"
-          >
-            <span className="relative z-10">Hello, I'm</span>
-          </motion.p>
+  className="mb-4 relative"
+>
+  <span className="relative z-0 text-4xl text-white font-bold">
+    Hello, I'm
+  </span>
+</motion.p>
+
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6"
+            className="text-6xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 dark:from-cyan-300 dark:via-blue-400 dark:to-indigo-400 bg-clip-text text-transparent animate-shimmer bg-[length:250%_100%] font-extrabold">
+            <span className="bg-gradient-to-r from-cyan-200 via-blue-700 to-indigo-800 dark:from-cyan-300 dark:via-blue-400 dark:to-indigo-300 bg-clip-text text-transparent animate-shimmer bg-[length:250%_100%] font-extrabold">
               Indranuj Dev
             </span>
           </motion.h1>
@@ -54,7 +57,7 @@ const Hero: React.FC = () => {
               cursor
               cursorStyle="|"
               typeSpeed={80}
-              deleteSpeed={50}
+              deleteSpeed={30}
               delaySpeed={2000}
             />
           </motion.h2>
