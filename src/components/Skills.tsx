@@ -6,32 +6,31 @@ const Skills: React.FC = () => {
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'tailwindCSS', level: 85, color: 'from-green-400 to-green-700' },
-        { name: 'JavaScript', level: 70, color: 'from-yellow-500 to-yellow-700' },
-        { name: 'React', level: 70, color: 'from-blue-600 to-blue-700' },
-        { name: 'NextJs', level: 50, color: 'from-gray-400 to-gray-500' },
-        { name: 'TypeScript', level: 50, color: 'from-teal-400 to-blue-500' },
-        
+        { name: 'TailwindCSS', level: 85, color: 'from-blue-600 to-cyan-400', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+        { name: 'JavaScript', level: 70, color: 'from-blue-600 to-cyan-400', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+        { name: 'React', level: 70, color: 'from-blue-600 to-cyan-400', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Next.js', level: 50, color: 'from-blue-600 to-cyan-400', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+        { name: 'TypeScript', level: 50, color: 'from-blue-600 to-cyan-400', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
       ]
     },
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', level: 90, color: 'from-green-500 to-green-600' },
-        { name: 'Express', level: 88, color: 'from-yellow-400 to-yellow-600' },
-        { name: 'Mongoose', level: 85, color: 'from-blue-600 to-indigo-700' },
-        { name: 'Axios', level: 82, color: 'from-green-600 to-green-700' },
-        { name: 'Socketio', level: 80, color: 'from-pink-500 to-purple-600' }
+        { name: 'Node.js', level: 90, color: 'from-pink-300 to-purple-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Express', level: 88, color: 'from-pink-300 to-purple-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+        { name: 'Mongoose', level: 85, color: 'from-pink-300 to-purple-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'Axios', level: 82, color: 'from-pink-300 to-purple-500', logo: 'https://avatars.githubusercontent.com/u/32372333?s=200&v=4' },
+        { name: 'Socket.io', level: 80, color: 'from-pink-300 to-purple-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg' },
       ]
     },
     {
       title: 'Databases & Tools',
       skills: [
-        { name: 'MySQL', level: 88, color: 'from-purple-500 to-pink-500' },
-        { name: 'MongoDB', level: 85, color: 'from-purple-600 to-pink-600' },
-        { name: 'Git', level: 92, color: 'from-yellow-400 to-green-500' },
-        { name: 'Firebase', level: 78, color: 'from-yellow-500 to-orange-500' },
-        { name: 'VSCode', level: 80,color: 'from-blue-500 to-blue-600' }
+        { name: 'MySQL', level: 88, color: 'from-yellow-500 to-orange-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'MongoDB', level: 85, color: 'from-yellow-500 to-orange-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'Git', level: 92, color: 'from-yellow-500 to-orange-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+        { name: 'Firebase', level: 78, color: 'from-yellow-500 to-orange-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+        { name: 'VSCode', level: 80, color: 'from-yellow-500 to-orange-500', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
       ]
     }
   ];
@@ -68,7 +67,7 @@ const Skills: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                 {category.title}
               </h3>
-              
+
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
@@ -80,14 +79,15 @@ const Skills: React.FC = () => {
                     className="space-y-2"
                   >
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">
-                        {skill.name}
-                      </span>
+                      <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+                        <img src={skill.logo} alt={skill.name} className="w-7 h-7" />
+                        <span>{skill.name}</span>
+                      </div>
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {skill.level}%
                       </span>
                     </div>
-                    
+
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
                       <motion.div
                         className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
@@ -103,39 +103,6 @@ const Skills: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional Technologies */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Technologies I Work With
-          </h3>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              'JavaScript', 'TypeScript', 'React', 'Node.js',
-              'Python', 'FastAPI',  'MongoDB',
-              'Figma','Canva', 'Adobe Creative Suite'
-            ].map((tech, index) => (
-              <motion.span
-                key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.05 * index }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1, y: -2 }}
-                className="px-4 py-2 bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
