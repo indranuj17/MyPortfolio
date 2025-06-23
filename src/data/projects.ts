@@ -69,8 +69,8 @@ export const projects: Project[] = [
     longDescription: "A modern, responsive personal portfolio built with React.js to showcase projects, skills, and experience. Integrated with animations using Framer Motion, dynamic content from constants, and styled-components for custom theming. Features include a dark/light mode toggle, smooth scroll navigation, and modular code structure for scalability and performance.",
     image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "Web",
-    technologies: ["HTML","CSS","Javascript","Typescript","React"],
-    githubUrl: "",
+    technologies: ["HTML","CSS","TailwindCSS","Javascript","Typescript","React","Framer"],
+    githubUrl: "https://github.com/indranuj17/MyPortfolio/tree/main",
     liveUrl: "",
     featured:   false
   },

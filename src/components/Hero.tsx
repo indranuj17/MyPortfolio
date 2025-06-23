@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 relative"
           >
-            <span className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 dark:from-primary-300 dark:via-secondary-300 dark:to-accent-300 bg-clip-text text-transparent relative z-10 animate-shimmer bg-[length:200%_100%]">
+            <span className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 dark:from-primary-200 dark:via-secondary-300 dark:to-accent-300 bg-clip-text text-transparent relative z-10 animate-shimmer bg-[length:200%_100%]">
               Indranuj Dev
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 dark:from-primary-400/20 dark:to-secondary-400/20 blur-2xl rounded-lg animate-glow" />
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
-            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="text-lg text-gray-300 dark:text-gray-100 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
            Passionate developer skilled in C++, Full-Stack web development, and machine learning. Strong in DSA, with a focus on building impactful projects and currently exploring deep learning and AI deployment.
           </motion.p>

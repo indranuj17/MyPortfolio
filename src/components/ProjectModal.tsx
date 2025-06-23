@@ -48,7 +48,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm"
+                    className="px-3 py-1 bg-purple-500/20 text-purple-100 rounded-full text-sm"
                   >
                     {tech}
                   </span>
